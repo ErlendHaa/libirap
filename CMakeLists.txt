@@ -7,6 +7,8 @@ include(GNUInstallDirs)
 include(CTest)
 include(TestBigEndian)
 
+option(BUILD_APPS "Build applications"  OFF)
+
 set(CMAKE_C_STANDARD   99)
 set(CMAKE_CXX_STANDARD 11)
 
@@ -86,6 +88,8 @@ export(
     NAMESPACE
         irap::
 )
+
+add_subdirectory(applications)
 
 if (NOT BUILD_TESTING)
     return()
