@@ -8,6 +8,7 @@ include(CTest)
 include(TestBigEndian)
 
 option(BUILD_APPS "Build applications"  OFF)
+option(BUILD_DOCS "Build documentation" OFF)
 
 set(CMAKE_C_STANDARD   99)
 set(CMAKE_CXX_STANDARD 11)
@@ -90,6 +91,7 @@ export(
 )
 
 add_subdirectory(applications)
+add_subdirectory(docs)
 
 if (NOT BUILD_TESTING)
     return()
